@@ -1,0 +1,24 @@
+server:
+  port: 8080
+#  ssl:
+#    key-store: classpath:ssl/gfhcg.com.pfx
+#    key-store-password: dgh23uoynop
+#    key-store-type: PKCS12
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: TLK5lOBEeIXGQExz3R7U # MYSQL数据库密码
+    url: jdbc:mysql://43.134.107.136:53306/automatic_equipment?serverTimezone=GMT%2B8 # JDBC连接数据库的地址，需要修改'81.68.204.30:3306/child'这段，最后3306代表端口号，前面代表服务器ip
+    username: epms # 数据库用户名
+    hikari:
+      max-lifetime: 500000
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+  devtools:
+    restart:
+      enabled: false
+
